@@ -1,0 +1,139 @@
+:root{
+    --background-color: #E0E0E0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 1.6em;
+}
+
+html{
+    background-color: var(--background-color);
+    font-size: 62.5%;
+}
+
+/* Navbar*/
+
+nav div{
+    background-color: var(--background-color);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 2px 20px #000;
+}
+
+nav i{
+    color: #fff;
+}
+
+nav div img{
+    width: 100px;
+}
+
+nav div a{
+  margin-bottom: -5px;
+}
+
+/* Navbar*/
+
+.fondoazul h1{
+    color: #fff;
+    margin: 25px 0;
+    padding-bottom: 25px;
+}
+
+.fondoazul{
+    background-image: url(img/fondoazul.png);
+    text-align: center;
+    background-size: cover;
+}
+
+html{
+    background-image: url(img/fondoNuevo.png);
+}
+
+.collab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 25px;
+}
+
+.divisorVertical{
+    width: 3px;
+    height: 80px;
+    background-color: #FFFFFF;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Esto centra el contenido horizontalmente */
+    text-align: center;  /* Esto centra el texto dentro de los elementos */
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.texto h2{
+    margin: 50px 20px;
+    text-align: center;
+    color: #000;
+    font-weight: lighter;
+    background-color: #E0E0E0;
+}
+
+.texto h3{
+    margin: 50px;
+    background-color: #E0E0E0;
+    text-align: center;
+    color: #000;
+    font-weight: lighter;
+}
+
+.btn {
+    display: block;
+    border-style: initial;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    border-color: #3EB2EA;
+    width: 300px;
+    margin: 20px auto;
+    padding:20px 24px;
+    background-color: #3EB2EA;
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 15px;
+    font-family: 'Albert Sans', sans-serif;
+    text-align: center;
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+}
+
+footer div:first-child li{
+    font-size: .8em;
+    padding: 5px;
+}

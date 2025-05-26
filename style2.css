@@ -1,0 +1,576 @@
+:root{
+    --background-color: #E0E0E0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 1.6em;
+}
+
+html{
+    background-color: var(--background-color);
+    font-size: 62.5%;
+}
+
+/* Navbar*/
+
+nav div{
+    background-color: var(--background-color);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 2px 20px #000;
+}
+
+nav i{
+    color: #fff;
+}
+
+nav div img{
+    height: 50px;
+}
+
+nav div a{
+  margin-bottom: -5px;
+}
+
+/* Navbar*/
+
+.collab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 150px 50px 50px;
+    gap: 50px;
+}
+
+.collab img:first-of-type{
+    height: 300px;
+    width: 300px;
+}
+
+.collab img:last-of-type{
+    height: 80px;
+    width: 400px;
+}
+
+.collab hr{
+    width: 300px;
+    height: 4px;
+    border: none;
+    background-color: #FFFFFF ;
+  }
+
+.divisorVertical{
+    display: none;
+}
+
+
+.portada{
+    background-image: url(img/fondoazul.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 100px;
+    gap: 50px;
+}
+
+.textons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textons hr{
+    background-color: #3EB2EA;
+    margin: 25px ;
+    width: 300px;
+}
+
+.textons h1{
+    margin-top: 50px;
+    font-size: 3em;
+}
+
+.textons h2{
+    font-weight: lighter;
+    font-size: 2em;
+    margin: 0 160px;
+}
+
+.textons span{
+    font-weight: bold;
+}
+
+.textons a{
+    background-color: #3EB2EA;
+    width: 280px;
+    padding: 25px 0;
+    border-radius: 15px;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.textons p{
+    font-size: 1.2em;
+    width: 300px;
+    font-weight: lighter;
+}
+
+/* Cards desktop */
+
+.fondo{
+    background-image: url(img/fondoNuevo.png);
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    align-items: center;
+}
+
+.cards hr{
+    background-color: #3EB2EA;
+    width: 1000px;
+    height: 4px;
+}
+
+.cards h2{
+    font-size: 2em;
+    text-align: center;
+    margin: 20px 0;
+    margin-bottom: 100px;
+    width: 1000px;
+    background-color: #E0E0E0;
+}
+
+.tarjetasGeneral{
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+}
+
+.card img{
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+}
+
+.card{
+    text-align: center;
+    background-color: #fff;
+    height: 300px;
+    width: 300px;
+    padding-top: 15px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+
+
+.imgCard{
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    background-color: #0461A6;
+    padding-top: 15px;
+    border-radius: 100px;
+}
+
+.card h3{
+    color: #0461A6;
+    font-size: 1.8em;
+    margin: 15px 20px;
+}
+
+.card p{
+    font-size: 1.2em;
+    margin: 0 20px;
+}
+
+.cards hr:last-of-type{
+    margin-top: 50px;
+    width: 500px;
+}
+
+/* Cards desktop */
+
+/* fixture combinado con los comentarios */
+
+.fixture1{
+    display: none;
+}
+
+.izquierdo, .derecho{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.izquierdo .burbuja {
+    flex-direction: row-reverse;
+}
+
+.izquierdo .triangulo {
+    left: auto;
+    right: -15px;
+    border-right: none;
+    border-left: 15px solid #213F7D;
+}
+
+.testimonios {
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 60px 20px;
+    height: 600px;
+}
+
+.burbuja {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+.izquierda .burbuja:first-of-type{
+    margin-bottom: 200px;
+}
+
+.burbuja img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.mensaje {
+    background-color: #0071CE;
+    color: white;
+    border-radius: 15px;
+    padding: 15px 20px;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    width: 100%;       /* ocupa todo el contenedor */
+    max-width: 370px;  /* límite fijo para que no se pase en pantallas grandes */
+}
+
+/* Triángulo que apunta hacia la izquierda (abajo) */
+.triangulo {
+    position: absolute;
+    bottom: 10px;
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid #213F7D;
+}
+
+.mensaje h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.mensaje .profesion {
+    font-size: 0.9em;
+    opacity: 0.85;
+    margin-bottom: 10px;
+}
+
+
+/* fixture combinado con los comentarios */
+
+/* notiYPF */
+
+.notiYPF {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px; /* o ajustá el valor según el espaciado deseado */
+  padding: 50px;
+  flex-wrap: wrap; /* opcional si querés que se acomode en pantallas más chicas */
+}
+
+.imgNoti,
+.faq-section {
+  flex: 1; /* para que ocupen espacio equitativo o podés usar medidas fijas */
+  max-width: 580px; /* opcional: límite del ancho de cada uno */
+}
+
+.faq-section {
+  padding: 40px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.faq-title {
+  color: #0461A6;
+  background-color: #E0E0E0;
+  font-size: 1.6em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  background-color: #0461A6;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.accordion-toggle {
+  width: 100%;
+  background: none;
+  color: #fff;
+  font-size: 1em;
+  padding: 15px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-toggle i {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background-color: #3185C3;
+  padding: 0 15px;
+  color: #fff;
+  text-align: left;
+}
+
+.accordion-item.active .accordion-content {
+  padding: 15px;
+  max-height: 500px;
+}
+
+hr.desktop {
+    width: 500px;
+    margin: 0 auto;
+    height: 4px;
+    background-color: #3EB2EA;
+    border: none;
+}
+
+
+/* notiYPF */
+
+/* formulario y el REGISTRATE */
+
+.registrate hr{
+    width: 300px;;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 4px;
+    border: none;
+    background-color: #3EB2EA;
+}
+
+.registrate hr:last-of-type{
+    width: 80%;
+}
+
+.registrate{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registrate h2{
+    font-size: 1.8em;
+    background-color: #E0E0E0;
+    margin: 25px 0;
+    color: #0461A6;
+}
+
+.registrate p{
+    text-align: center;
+    background-color: #E0E0E0;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.registrate hr:last-child{
+    margin: 0 160px;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+  }
+  
+  .formulario-contenido {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  .formulario-contenido input[type="text"],
+  .formulario-contenido input[type="date"],
+  .formulario-contenido input[type="tel"],
+  .formulario-contenido input[type="email"] {
+    padding: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #ccc;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+  
+  .opciones-contacto {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .opcion {
+    flex: 1;
+    background-color: #eee;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.3rem;
+  }
+  
+  .opcion.activo {
+    background-color: #0461A6;
+    color: #fff;
+  }
+  
+  .separador {
+    height: 2px;
+    background-color: #00aaff;
+    border: none;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .preferencias {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .preferencias label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 0.5rem;
+  }
+  
+  .preferencias input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-left: 1rem;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .preferencias input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 50%;
+  }
+  
+  .btn-enviar {
+    background-color: #0461A6;
+    color: white;
+    font-size: 2rem;
+    padding: 20px 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
+/* formulario y el REGISTRATE */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+}
+
+footer img{
+    margin-right: 25px;
+}
+
+footer div:first-child li{
+    font-size: .8em;
+    padding: 5px;
+}
+
+/* cosas para poner en el mobile 
+
+.collab hr{
+    display: none;
+}
+
+.desktop {
+    display: none;
+}
+
+*/
