@@ -1,0 +1,762 @@
+:root {
+    --background-color: #E0E0E0;
+    --celeste-claro: #3EB2EA;
+    --azul-oscuro: #0461A6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 1.6em;
+}
+
+html {
+    background-image: url(img/fondoNuevo.png);
+    font-size: 62.5%;
+}
+
+/* Navbar*/
+
+nav div {
+    background-color: var(--background-color);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 2px 20px #000;
+}
+
+nav i {
+    color: #fff;
+}
+
+nav div img {
+    width: 100px;
+}
+
+nav div a {
+    margin-bottom: -5px;
+}
+
+.desktop {
+    display: none;
+}
+
+.portada {
+    background-image: url(img/fondoazul.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    padding: 20px 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.divisorVertical {
+    width: 4px;
+    color: #000;
+    background-color: #fff;
+    height: 100px;
+}
+
+.logo img:first-of-type {
+    height: 125px;
+}
+
+.logo img:last-of-type {
+    height: 40px;
+    width: 180px;
+}
+
+.textoPortada {
+    text-align: center;
+    color: #fff;
+}
+
+.textoPortada h1 {
+    margin: 20px 0;
+    font-size: 2em;
+}
+
+.textoPortada hr {
+    margin: 0 auto;
+    width: 200px;
+    height: 4px;
+    background-color: var(--celeste-claro);
+    border: none;
+}
+
+
+.textoPortada hr:last-of-type {
+    margin: 0 auto 50px auto;
+}
+
+.textoPortada h2 {
+    margin: 20px 20px;
+    font-weight: lighter;
+    font-size: 1.4em;
+}
+
+.textoPortada span {
+    font-weight: bold;
+}
+
+.textoPortada a {
+    margin-top: 25px;
+}
+
+.boton {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.300);
+    font-size: 1.4em;
+    background-color: var(--celeste-claro);
+}
+
+.textoPortada p {
+    margin: 50px 40px;
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+/* TARJETAS BENEFICIOS */
+
+.tarjetasBeneficios {
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjetasBeneficios hr {
+    width: 200px;
+    height: 4px;
+    margin: 20px auto;
+    background-color: var(--celeste-claro);
+}
+
+.tarjetasBeneficios h2 {
+    background-color: #E0E0E0;
+    text-align: center;
+    margin: 20px;
+}
+
+.card {
+    display: flex;
+    background-color: #fff;
+    box-shadow: 4px 2px 20px #00000044;
+    flex-direction: row;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.card h2 {
+    background-color: #fff;
+    text-align: left;
+    margin: 0;
+}
+
+.infoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card p {
+    text-align: left;
+    margin-right: 15px;
+    font-size: 1em;
+}
+
+.imgCard img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: -5px;
+}
+
+.imgCard {
+    background-color: var(--azul-oscuro);
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.infoCard h2 {
+    color: var(--azul-oscuro);
+}
+
+.infoCard h2:last-of-type {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+.testimonios {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+.burbuja {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.burbuja img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.mensaje {
+    background-color: #0071CE;
+    color: white;
+    border-radius: 15px;
+    padding: 15px 20px;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    /* ocupa todo el contenedor */
+    max-width: 320px;
+    /* límite fijo para que no se pase en pantallas grandes */
+}
+
+/* Triángulo que apunta hacia la izquierda (abajo) */
+.triangulo {
+    position: absolute;
+    bottom: 10px;
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid #213F7D;
+}
+
+.mensaje h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.mensaje .profesion {
+    font-size: 0.9em;
+    opacity: 0.85;
+    margin-bottom: 10px;
+}
+
+hr.separador.mobile {
+    width: 200px;
+    height: 4px;
+    margin: -20px auto;
+    background-color: var(--celeste-claro);
+}
+
+.faq-section {
+    padding: 40px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.faq-title {
+    color: #0461A6;
+    background-color: #E0E0E0;
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background-color: #0461A6;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-toggle {
+    width: 100%;
+    background: none;
+    color: #fff;
+    font-size: 1em;
+    padding: 15px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-toggle i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: #3185C3;
+    padding: 0 15px;
+    color: #fff;
+    text-align: left;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 15px;
+    max-height: 500px;
+}
+
+.sepa {
+    width: 60%;
+    height: 4px;
+    margin: 20px auto;
+    background-color: var(--celeste-claro);
+}
+
+.notiYPF {
+    display: flex;
+    flex-direction: column;
+}
+
+.notiYPF div {
+    margin: auto;
+}
+
+.registrate hr {
+    width: 300px;
+    ;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 4px;
+    border: none;
+    background-color: #3EB2EA;
+}
+
+.registrate hr:last-of-type {
+    width: 80%;
+}
+
+.registrate {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registrate h2 {
+    font-size: 1.8em;
+    background-color: #E0E0E0;
+    margin: 25px 0;
+    color: #0461A6;
+}
+
+.registrate p {
+    text-align: center;
+    background-color: #E0E0E0;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.registrate hr:last-child {
+    margin: 0 160px;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.formulario-contenido {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contenido input[type="text"],
+.formulario-contenido input[type="date"],
+.formulario-contenido input[type="tel"],
+.formulario-contenido input[type="email"] {
+    padding: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #ccc;
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+.opciones-contacto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.opcion {
+    flex: 1;
+    background-color: #eee;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.3rem;
+}
+
+.opcion.activo {
+    background-color: #0461A6;
+    color: #fff;
+}
+
+.separador {
+    height: 2px;
+    background-color: #00aaff;
+    border: none;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+}
+
+.preferencias {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.preferencias label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 0.5rem;
+}
+
+.preferencias input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-left: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.preferencias input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.btn-enviar {
+    background-color: #0461A6;
+    color: white;
+    font-size: 2rem;
+    padding: 20px 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+/* formulario y el REGISTRATE */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+}
+
+footer img {
+    margin-right: 25px;
+}
+
+footer div:first-child li {
+    font-size: .8em;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+
+
+    nav div img {
+        width: 200px;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .logo {
+        display: flex;
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .portada {
+        display: flex;
+        padding: 40px 0;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    .logo img:first-of-type {
+        height: 250px;
+    }
+
+    .logo hr {
+        width: 200px;
+        background-color: #fff;
+        height: 4px;
+    }
+
+    .logo img:last-of-type {
+        height: 80px;
+        width: 350px;
+    }
+
+    .textoPortada {
+        margin-top: 50px;
+    }
+
+    .textoPortada h2 {
+        width: 300px;
+        margin: 20px auto;
+    }
+
+    .textoPortada h1 {
+        font-size: 2.6em;
+    }
+
+    .textoPortada p {
+        width: 300px;
+    }
+
+    .boton {
+        padding: 25px 25px;
+    }
+
+    /* TARJETAS BENEFICIOS DK */
+
+    .tarjetasBeneficios hr {
+        width: 80%;
+    }
+
+    .tarjetasBeneficios h2 {
+        width: 60%;
+        margin: 25px auto;
+        font-size: 2em;
+    }
+
+    .tarjetasGeneral {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card h2 {
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .card {
+        text-align: center;
+        flex-direction: column;
+        height: 300px;
+        width: 300px;
+        gap: 25px;
+    }
+
+    .card p {
+        margin-top: 25px;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .imgCard {
+        margin: 0 auto;
+        width: 90px;
+        display: flex;
+    }
+
+    /* seccion conmbinada de testominos con el fixture */
+
+    .fixture1 {
+        display: none;
+    }
+
+    .izquierdo,
+    .derecho {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .izquierdo .burbuja {
+        flex-direction: row-reverse;
+    }
+
+    .izquierdo .triangulo {
+        left: auto;
+        right: -15px;
+        border-right: none;
+        border-left: 15px solid #213F7D;
+    }
+
+    .testimonios {
+        gap: 5px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        padding: 60px 20px;
+        height: 600px;
+    }
+
+    .burbuja {
+        display: flex;
+        align-items: flex-end;
+        gap: 20px;
+        max-width: 600px;
+        margin: 10px auto;
+    }
+
+    .izquierda .burbuja:first-of-type {
+        margin-bottom: 200px;
+    }
+
+    .burbuja img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #fff;
+    }
+
+    .mensaje {
+        background-color: #0071CE;
+        color: white;
+        border-radius: 15px;
+        padding: 15px 20px;
+        position: relative;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        /* ocupa todo el contenedor */
+        max-width: 370px;
+        /* límite fijo para que no se pase en pantallas grandes */
+    }
+
+    /* Triángulo que apunta hacia la izquierda (abajo) */
+    .triangulo {
+        position: absolute;
+        bottom: 10px;
+        left: -15px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 15px solid #213F7D;
+    }
+
+    .mensaje h3 {
+        font-size: 1.1em;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .mensaje .profesion {
+        font-size: 0.9em;
+        opacity: 0.85;
+        margin-bottom: 10px;
+    }
+
+    .centro hr {
+        width: 90%;
+        height: 4px;
+        margin: 20px auto;
+        background-color: var(--celeste-claro);
+    }
+
+
+    /* seccion de esta cosa que me esta costando */
+
+    .notiYPF {
+        display: flex;
+        flex-direction: row;
+        margin: 50px;
+        justify-content: center;
+    }
+
+    .notiYPF a {
+        margin: -430px;
+    }
+
+    .accordion {
+        width: 400px;
+    }
+
+    .registrate h2 {
+        font-size: 3em;
+    }
+
+    .registrate p {
+        font-size: 1.21em;
+    }
+
+}
