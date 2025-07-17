@@ -1,3 +1,5 @@
+// NOTA: Dejamos comentarios aclarando ciertas del codigo 
+
 let mic, fft;
 let patronActual = 1;
 let patronAnterior = 1;
@@ -10,7 +12,7 @@ let cantidadAgudos = 1.0;
 function setup() {
   createCanvas(500, 500);
   noFill();
-  userStartAudio(); // Necesario para habilitar el micrófono en navegador
+  userStartAudio();
 
   mic = new p5.AudioIn();
   mic.start();
@@ -24,9 +26,9 @@ function draw() {
   strokeWeight(1);
   fft.analyze();
 
-  let bassEnergy = fft.getEnergy(20, 250); // Graves
-  let trebleEnergy = fft.getEnergy(4000, 10000); // Agudos
-  let voiceEnergy = fft.getEnergy(80, 3000); // Voz general
+  let bassEnergy = fft.getEnergy(20, 250);
+  let trebleEnergy = fft.getEnergy(4000, 10000); 
+  let voiceEnergy = fft.getEnergy(80, 3000); 
 
   // Mapear energías para que más energía = menos elementos
   let objetivoGraves = map(bassEnergy, 0, 255, 1, 0);
