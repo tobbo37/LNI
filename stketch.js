@@ -10,11 +10,14 @@ let cantidadAgudos = 1.0;
 function setup() {
   createCanvas(500, 500);
   noFill();
+  userStartAudio(); // Necesario para habilitar el micrófono en navegador
+
   mic = new p5.AudioIn();
   mic.start();
   fft = new p5.FFT();
   fft.setInput(mic);
 }
+
 
 function draw() {
   background(0);
